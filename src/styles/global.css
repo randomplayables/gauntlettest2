@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 600px;
+}
+
+.number-selector,
+.guess-input,
+.guess-history {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.number-selector label,
+.guess-input label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.number-selector input,
+.guess-input input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.number-selector button,
+.guess-input button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.number-selector button:hover,
+.guess-input button:hover {
+  background-color: #0056b3;
+}
+
+.number-selector button:disabled,
+.guess-input button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.feedback {
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.feedback-high {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.feedback-low {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.feedback-correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.guess-history h2 {
+  margin-bottom: 12px;
+}
+
+.guess-history-list {
+  list-style: none;
+}
+
+.guess-history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.guess-history-item:last-child {
+  border-bottom: none;
+}
+
+.guess-history-item.guess-high .guess-result {
+  color: #856404;
+}
+
+.guess-history-item.guess-low .guess-result {
+  color: #0c5460;
+}
+
+.guess-history-item.guess-correct .guess-result {
+  color: #155724;
+}
+
+.hidden {
+  display: none !important;
+}
